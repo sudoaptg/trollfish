@@ -1,0 +1,37 @@
+1N 14-16 5M,6m, Singleton H OK
+  2C Stayman
+    2D no 4cM
+      2HS 5M-4oM Invite
+      3C3D 5+ GF
+      3HS 5oM-4M GF
+      4D4H Delayed Texas
+    2H 4+!h
+    2S 4+!s
+  2D !h Trf
+    2H Accepted
+    2S 5S5H Invite
+    2S3CD xx Superaccept
+    2N Max Super Accept
+    3H  Min Superaccept
+  2H !s Trf
+    2S Accepted
+    3H 5S5H Slam Interest
+    3CDH xx Superaccept
+    2N Max Super Accept
+    3S  Min Superaccept
+  2S Range Ask or !c
+    2N Min
+    3C Max
+  2N !d Trf
+    3D Accepted
+  3C Low Info Puppet Stayman
+     3D no 5cM
+     3HS 5cM
+  3D 55m GF
+     3H Agree !c
+     3S Agree !d
+  3HS (31)(54)
+  3N To Play
+  4C 5S5H GF
+  4D4H Texas
+ 

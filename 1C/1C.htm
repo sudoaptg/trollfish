@@ -1,0 +1,993 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <title>
+   No title supplied
+  </title>
+  <style type="text/css">
+   div.start {
+    display: inline-block;
+    vertical-align: top;
+    width: 60px;
+}
+    
+div.bidtable {
+    width:700px;
+    padding-bottom: 20px;
+}    
+
+div.bidtable ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+div.bidtable li ul
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-left: 60px;
+}
+
+div.tree {
+    list-style-type: none;
+    padding-bottom: 20px;
+}
+
+div.tree ul {
+    list-style-type: none;
+    /* vline.png */
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAKAQMAAABPHKYJAAAAA1BMVEWIiIhYZW6zAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH1ggGExMZBky19AAAAAtJREFUCNdjYMAEAAAUAAHlhrBKAAAAAElFTkSuQmCC);
+    background-size: 2px;
+    background-repeat: repeat-y;
+    margin: 0;
+    padding: 0;
+    margin-left: 10px;
+}
+
+div.tree li.node {
+    margin: 0;
+    padding: 0 12px;
+    line-height: 20px;
+    /* node.png */
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAUAQMAAACK1e4oAAAABlBMVEUAAwCIiIgd2JB2AAAAAXRSTlMAQObYZgAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9YIBhQIJYVaFGwAAAARSURBVAjXY2hgQIf/GTDFGgDSkwqATqpCHAAAAABJRU5ErkJggg==);
+    background-size: 12px;
+    background-repeat: no-repeat;
+}
+
+div.tree td.node {
+    vertical-align: top;
+    width: 60px;
+}
+
+div.tree li.last {
+    /* lastnode.png */
+    background-color: #fff;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAUAQMAAACK1e4oAAAABlBMVEUAAwCIiIgd2JB2AAAAAXRSTlMAQObYZgAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9YIBhQIIhs+gc8AAAAQSURBVAjXY2hgQIf/GbAAAKCTBYBUjWvCAAAAAElFTkSuQmCC) ;
+    background-size: 12px;
+    backrgound-repeat: no-repeat;
+}
+
+div.tree li.root {
+    background-color: #fff;
+    background-image: none;
+    backrgound-repeat: no-repeat;
+}
+
+.ccolor{color:Green}
+.dcolor{color:Orange}
+.hcolor{color:Red}
+.scolor{color:Black}
+
+@media print {
+    * {
+        -webkit-print-color-adjust: exact !important;   /* Chrome, Safari */
+				color-adjust: exact !important;                 /* Firefox */
+		}
+    div.tree ul {
+        background-size: 1px;
+    }
+}
+  </style>
+ </head>
+ <body>
+  <div class="tree">
+   <ul>
+    <li class="root">
+     <table>
+      <tr>
+       <td class="node" rowspan="4">
+        1
+        <span class="ccolor">
+         &clubs;
+        </span>
+       </td>
+       <td>
+        2+ clubs, one of three:
+       </td>
+      </tr>
+      <tr>
+       <td>
+        a) 11&ndash;13 NT (incl. 5
+        <span class="dcolor">
+         &diams;
+        </span>
+        )
+       </td>
+      </tr>
+      <tr>
+       <td>
+        b) 17&ndash;19 NT (incl. 5
+        <span class="dcolor">
+         &diams;
+        </span>
+        )
+       </td>
+      </tr>
+      <tr>
+       <td>
+        c) 11&ndash;21 natural
+       </td>
+      </tr>
+     </table>
+     <ul>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          1
+          <span class="dcolor">
+           &diams;
+          </span>
+         </td>
+         <td>
+          4+
+          <span class="hcolor">
+           &hearts;
+          </span>
+         </td>
+        </tr>
+       </table>
+       <ul>
+        <li class="node">
+         <table>
+          <tr>
+           <td class="node" rowspan="1">
+            1
+            <span class="hcolor">
+             &hearts;
+            </span>
+           </td>
+           <td>
+            2-3
+            <span class="hcolor">
+             &hearts;
+            </span>
+            , 11&ndash;15, singleton honor allowed (e.g. 3145 that rejects 1
+            <span class="dcolor">
+             &diams;
+            </span>
+            canape opening)
+           </td>
+          </tr>
+         </table>
+        </li>
+        <li class="node">
+         <table>
+          <tr>
+           <td class="node" rowspan="1">
+            1
+            <span class="scolor">
+             &spades;
+            </span>
+           </td>
+           <td>
+            4+
+            <span class="scolor">
+             &spades;
+            </span>
+            5+
+            <span class="ccolor">
+             &clubs;
+            </span>
+            , 11&ndash;18 hcp, unbalanced
+           </td>
+          </tr>
+         </table>
+        </li>
+        <li class="node">
+         <table>
+          <tr>
+           <td class="node" rowspan="1">
+            1NT
+           </td>
+           <td>
+            17&ndash;19 hcp, balanced
+           </td>
+          </tr>
+         </table>
+        </li>
+        <li class="node">
+         <table>
+          <tr>
+           <td class="node" rowspan="1">
+            2
+            <span class="ccolor">
+             &clubs;
+            </span>
+           </td>
+           <td>
+            6+
+            <span class="ccolor">
+             &clubs;
+            </span>
+            , 11&ndash;15
+           </td>
+          </tr>
+         </table>
+        </li>
+        <li class="node">
+         <table>
+          <tr>
+           <td class="node" rowspan="1">
+            2
+            <span class="dcolor">
+             &diams;
+            </span>
+           </td>
+           <td>
+            reverse
+           </td>
+          </tr>
+         </table>
+        </li>
+        <li class="node">
+         <table>
+          <tr>
+           <td class="node" rowspan="1">
+            2
+            <span class="hcolor">
+             &hearts;
+            </span>
+           </td>
+           <td>
+            11&ndash;14, 4
+            <span class="hcolor">
+             &hearts;
+            </span>
+           </td>
+          </tr>
+         </table>
+        </li>
+        <li class="node">
+         <table>
+          <tr>
+           <td class="node" rowspan="1">
+            2
+            <span class="scolor">
+             &spades;
+            </span>
+           </td>
+           <td>
+            4+s 5+c, 19&ndash;21 hcp
+           </td>
+          </tr>
+         </table>
+        </li>
+        <li class="node">
+         <table>
+          <tr>
+           <td class="node" rowspan="1">
+            2NT
+           </td>
+           <td>
+            3
+            <span class="hcolor">
+             &hearts;
+            </span>
+            6
+            <span class="ccolor">
+             &clubs;
+            </span>
+            ,16&ndash;18
+           </td>
+          </tr>
+         </table>
+        </li>
+        <li class="node">
+         <table>
+          <tr>
+           <td class="node" rowspan="1">
+            3
+            <span class="ccolor">
+             &clubs;
+            </span>
+           </td>
+           <td>
+            6+
+            <span class="ccolor">
+             &clubs;
+            </span>
+            , no 3
+            <span class="hcolor">
+             &hearts;
+            </span>
+            , 16&ndash;18
+           </td>
+          </tr>
+         </table>
+        </li>
+        <li class="node">
+         <table>
+          <tr>
+           <td class="node" rowspan="1">
+            3
+            <span class="dcolor">
+             &diams;
+            </span>
+           </td>
+           <td>
+            SPL
+           </td>
+          </tr>
+         </table>
+        </li>
+        <li class="node">
+         <table>
+          <tr>
+           <td class="node" rowspan="1">
+            3
+            <span class="hcolor">
+             &hearts;
+            </span>
+           </td>
+           <td>
+            15-17 4
+            <span class="hcolor">
+             &hearts;
+            </span>
+           </td>
+          </tr>
+         </table>
+        </li>
+        <li class="node">
+         <table>
+          <tr>
+           <td class="node" rowspan="1">
+            3
+            <span class="scolor">
+             &spades;
+            </span>
+           </td>
+           <td>
+            SPL
+           </td>
+          </tr>
+         </table>
+        </li>
+        <li class="node">
+         <table>
+          <tr>
+           <td class="node" rowspan="1">
+            3NT
+           </td>
+           <td>
+            7+ solid clubs, gambling
+           </td>
+          </tr>
+         </table>
+        </li>
+        <li class="node">
+         <table>
+          <tr>
+           <td class="node" rowspan="1">
+            4
+            <span class="ccolor">
+             &clubs;
+            </span>
+           </td>
+           <td>
+            4
+            <span class="hcolor">
+             &hearts;
+            </span>
+            6+
+            <span class="ccolor">
+             &clubs;
+            </span>
+            , gameforcing
+           </td>
+          </tr>
+         </table>
+        </li>
+        <li class="node">
+         <table>
+          <tr>
+           <td class="node" rowspan="1">
+            4
+            <span class="dcolor">
+             &diams;
+            </span>
+           </td>
+           <td>
+            SPL
+           </td>
+          </tr>
+         </table>
+        </li>
+        <li class="last node">
+         <table>
+          <tr>
+           <td class="node" rowspan="1">
+            4
+            <span class="hcolor">
+             &hearts;
+            </span>
+           </td>
+           <td>
+            4
+            <span class="hcolor">
+             &hearts;
+            </span>
+            , 18&ndash;21
+           </td>
+          </tr>
+         </table>
+        </li>
+       </ul>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          1
+          <span class="hcolor">
+           &hearts;
+          </span>
+         </td>
+         <td>
+          4+
+          <span class="scolor">
+           &spades;
+          </span>
+         </td>
+        </tr>
+       </table>
+       <ul>
+        <li class="node">
+         <table>
+          <tr>
+           <td class="node" rowspan="1">
+            1
+            <span class="scolor">
+             &spades;
+            </span>
+           </td>
+           <td>
+            2-3
+            <span class="scolor">
+             &spades;
+            </span>
+            , 11-15
+           </td>
+          </tr>
+         </table>
+        </li>
+        <li class="node">
+         <table>
+          <tr>
+           <td class="node" rowspan="1">
+            1NT
+           </td>
+           <td>
+            17&ndash;19 hcp, balanced
+           </td>
+          </tr>
+         </table>
+        </li>
+        <li class="node">
+         <table>
+          <tr>
+           <td class="node" rowspan="1">
+            2
+            <span class="ccolor">
+             &clubs;
+            </span>
+           </td>
+           <td>
+            6+
+            <span class="ccolor">
+             &clubs;
+            </span>
+            , 11&ndash;15
+           </td>
+          </tr>
+         </table>
+        </li>
+        <li class="node">
+         <table>
+          <tr>
+           <td class="node" rowspan="1">
+            2
+            <span class="dcolor">
+             &diams;
+            </span>
+            <span class="hcolor">
+             &hearts;
+            </span>
+           </td>
+           <td>
+            reverse
+           </td>
+          </tr>
+         </table>
+        </li>
+        <li class="node">
+         <table>
+          <tr>
+           <td class="node" rowspan="1">
+            2
+            <span class="scolor">
+             &spades;
+            </span>
+           </td>
+           <td>
+            4
+            <span class="scolor">
+             &spades;
+            </span>
+            , 11&ndash;14
+           </td>
+          </tr>
+         </table>
+        </li>
+        <li class="node">
+         <table>
+          <tr>
+           <td class="node" rowspan="1">
+            2NT
+           </td>
+           <td>
+            3
+            <span class="scolor">
+             &spades;
+            </span>
+            6
+            <span class="ccolor">
+             &clubs;
+            </span>
+            ,16&ndash;18
+           </td>
+          </tr>
+         </table>
+        </li>
+        <li class="node">
+         <table>
+          <tr>
+           <td class="node" rowspan="1">
+            3
+            <span class="ccolor">
+             &clubs;
+            </span>
+           </td>
+           <td>
+            6+
+            <span class="ccolor">
+             &clubs;
+            </span>
+            , no 3
+            <span class="scolor">
+             &spades;
+            </span>
+            , 16&ndash;18
+           </td>
+          </tr>
+         </table>
+        </li>
+        <li class="node">
+         <table>
+          <tr>
+           <td class="node" rowspan="1">
+            3
+            <span class="dcolor">
+             &diams;
+            </span>
+           </td>
+           <td>
+            SPL
+           </td>
+          </tr>
+         </table>
+        </li>
+        <li class="node">
+         <table>
+          <tr>
+           <td class="node" rowspan="1">
+            3
+            <span class="hcolor">
+             &hearts;
+            </span>
+           </td>
+           <td>
+            SPL
+           </td>
+          </tr>
+         </table>
+        </li>
+        <li class="node">
+         <table>
+          <tr>
+           <td class="node" rowspan="1">
+            3
+            <span class="scolor">
+             &spades;
+            </span>
+           </td>
+           <td>
+            15-17 4
+            <span class="scolor">
+             &spades;
+            </span>
+           </td>
+          </tr>
+         </table>
+        </li>
+        <li class="node">
+         <table>
+          <tr>
+           <td class="node" rowspan="1">
+            3NT
+           </td>
+           <td>
+            7+ solid clubs, gambling
+           </td>
+          </tr>
+         </table>
+        </li>
+        <li class="node">
+         <table>
+          <tr>
+           <td class="node" rowspan="1">
+            4
+            <span class="ccolor">
+             &clubs;
+            </span>
+           </td>
+           <td>
+            4
+            <span class="scolor">
+             &spades;
+            </span>
+            6+
+            <span class="ccolor">
+             &clubs;
+            </span>
+            , gameforcing
+           </td>
+          </tr>
+         </table>
+        </li>
+        <li class="node">
+         <table>
+          <tr>
+           <td class="node" rowspan="1">
+            4
+            <span class="dcolor">
+             &diams;
+            </span>
+           </td>
+           <td>
+            SPL
+           </td>
+          </tr>
+         </table>
+        </li>
+        <li class="node">
+         <table>
+          <tr>
+           <td class="node" rowspan="1">
+            4
+            <span class="hcolor">
+             &hearts;
+            </span>
+           </td>
+           <td>
+            SPL
+           </td>
+          </tr>
+         </table>
+        </li>
+        <li class="last node">
+         <table>
+          <tr>
+           <td class="node" rowspan="1">
+            4
+            <span class="scolor">
+             &spades;
+            </span>
+           </td>
+           <td>
+            4
+            <span class="scolor">
+             &spades;
+            </span>
+            , 18&ndash;21
+           </td>
+          </tr>
+         </table>
+        </li>
+       </ul>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          1
+          <span class="scolor">
+           &spades;
+          </span>
+         </td>
+         <td>
+          4+
+          <span class="dcolor">
+           &diams;
+          </span>
+          or balanced
+         </td>
+        </tr>
+       </table>
+       <ul>
+        <li class="node">
+         <table>
+          <tr>
+           <td class="node" rowspan="1">
+            1NT
+           </td>
+           <td>
+            weak NT, XYZ applies as continuation
+           </td>
+          </tr>
+         </table>
+        </li>
+        <li class="node">
+         <table>
+          <tr>
+           <td class="node" rowspan="1">
+            2
+            <span class="ccolor">
+             &clubs;
+            </span>
+           </td>
+           <td>
+            6+
+            <span class="ccolor">
+             &clubs;
+            </span>
+            11-15
+           </td>
+          </tr>
+         </table>
+        </li>
+        <li class="node">
+         <table>
+          <tr>
+           <td class="node" rowspan="1">
+            2
+            <span class="dcolor">
+             &diams;
+            </span>
+            <span class="hcolor">
+             &hearts;
+            </span>
+            <span class="scolor">
+             &spades;
+            </span>
+           </td>
+           <td>
+            reverse
+           </td>
+          </tr>
+         </table>
+        </li>
+        <li class="node">
+         <table>
+          <tr>
+           <td class="node" rowspan="1">
+            2NT
+           </td>
+           <td>
+            17-19 bal
+           </td>
+          </tr>
+         </table>
+        </li>
+        <li class="last node">
+         <table>
+          <tr>
+           <td class="node" rowspan="1">
+            3
+            <span class="ccolor">
+             &clubs;
+            </span>
+           </td>
+           <td>
+            6+
+            <span class="ccolor">
+             &clubs;
+            </span>
+            16-18
+           </td>
+          </tr>
+         </table>
+        </li>
+       </ul>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          1NT
+         </td>
+         <td>
+          5+
+          <span class="ccolor">
+           &clubs;
+          </span>
+          , 6&ndash;12 (?)
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          2
+          <span class="ccolor">
+           &clubs;
+          </span>
+         </td>
+         <td>
+          natural gf, 13+ hcp (?)
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          2
+          <span class="dcolor">
+           &diams;
+          </span>
+         </td>
+         <td>
+          1 major weak
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          2
+          <span class="hcolor">
+           &hearts;
+          </span>
+         </td>
+         <td>
+          5-5+ minors
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          2
+          <span class="scolor">
+           &spades;
+          </span>
+         </td>
+         <td>
+          13&ndash;15 or 19+ balanced (transfer to opener)
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          2NT
+         </td>
+         <td>
+          13&ndash;15 or 19+ balanced
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          3
+          <span class="ccolor">
+           &clubs;
+          </span>
+         </td>
+         <td>
+          PRE
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          3
+          <span class="dcolor">
+           &diams;
+          </span>
+         </td>
+         <td>
+          PRE
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          3
+          <span class="hcolor">
+           &hearts;
+          </span>
+         </td>
+         <td>
+          PRE
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          3
+          <span class="scolor">
+           &spades;
+          </span>
+         </td>
+         <td>
+          PRE
+         </td>
+        </tr>
+       </table>
+      </li>
+      <li class="last node">
+       <table>
+        <tr>
+         <td class="node" rowspan="1">
+          3NT
+         </td>
+         <td>
+          16&ndash;18 balanced
+         </td>
+        </tr>
+       </table>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </div>
+ </body>
+</html>
