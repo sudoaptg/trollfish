@@ -1,3 +1,5 @@
 #+Title: Fish is a Troll
 #+Author: Kevin
 #+Description: Modern Standard Bridge Bidding System with transfers and relays
+
+1C 2+!c 5!d possible 11-21
