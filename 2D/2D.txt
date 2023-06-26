@@ -1,0 +1,15 @@
+2D Mini-Multi
+  2HS P/C
+  2N Ask
+    3C Max
+      3D Ask
+        3H !s
+        3S !h
+    3DH Transfer
+  3C I have a suit
+    3D Relay
+  3D invite
+  3HS P/C
+  4C Transfer
+  4D Bid your suit
+  4HS To Play
